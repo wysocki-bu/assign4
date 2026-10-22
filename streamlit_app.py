@@ -29,4 +29,18 @@ with tabs[2]:
 # Tab 4: Volume Chart
 with tabs[3]:
     st.subheader(f"Something New")
-    st.bar_chart(df['Volume'])
+
+
+    # Create a single data point for the center of the circle
+    data = pd.DataFrame({"x": [0], "y": [0]})
+
+    # Draw the circle using a scatter chart with a large size
+    st.scatter_chart(
+       data,
+       x="x",
+       y="y",
+       size=5000,          # Adjust this value to make the circle larger or smaller
+       color="#FF4B4B",    # Streamlit's default red accent color
+    )
+
+
